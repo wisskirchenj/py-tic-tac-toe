@@ -16,14 +16,13 @@ The sources of main project tasks (5 stages) and testing.
 
 Install the wheel file using pip after clone/fork:
 
-> $ pip install dist/py-tic-tac-toe-3.11.1-py3-none-any.whl
+> $ pip install dist/py_tic_tac_toe-3.11.1-py3-none-any.whl
 
 ## Program description
 
-The toy project implements a Tic-Tac-Toe gam in python..
+The toy project implements a Tic-Tac-Toe game in python..
 
 Have fun!
-
 
 ## Project completion
 
@@ -34,3 +33,8 @@ Have fun!
 06.01.23 Project started - gitHub repo and project structure setup.
 
 07.01.23 Stage 1 completed - just a print out of a game.
+
+07.01.23 Stage 2 completed - take game state input and display.
+
+07.01.23 Stage 3 completed - display game state and analyze it's state. Board class implemented with methods, first
+Python unittests with Idea supported run-configuration
