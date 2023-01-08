@@ -6,7 +6,7 @@ With this project, the track will be completed
 ## Technology / External Libraries
 
 - Python 3.11.1,
-- with packages: typing, scikit-learn, tox, black and isort
+- with packages: re, io, unittest, unittest.mock
 
 ## Repository Contents
 
@@ -38,3 +38,5 @@ Have fun!
 
 07.01.23 Stage 3 completed - display game state and analyze it's state. Board class implemented with methods, first
 Python unittests with Idea supported run-configuration
+
+08.01.23 Stage 4 completed - ask player for a move, validate given input and make move if applicable

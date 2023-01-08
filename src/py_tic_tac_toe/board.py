@@ -5,6 +5,10 @@ DRAW = 'Draw'
 UNFINISHED = 'Game not finished'
 
 
+def get_index(coords: (int, int)) -> int:
+    return coords[0] * 3 - 4 + coords[1]
+
+
 class Board:
     def __init__(self, content: str):
         self.content = content
@@ -42,3 +46,10 @@ class Board:
         if has_triple_o:
             return O_WINS
         return UNFINISHED if '_' in self.content else DRAW
+
+    def get_cell(self, coords: (int, int)) -> str:
+        return self.content[get_index(coords)]
+
+    def set_cell(self, coords: (int, int), char: str):
+        index = get_index(coords)
+        self.content = self.content[:index] + char + self.content[index + 1:]

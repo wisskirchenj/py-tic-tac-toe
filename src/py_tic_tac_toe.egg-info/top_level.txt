@@ -1,1 +1,1 @@
-py-tic-tac-toe
+py_tic_tac_toe
