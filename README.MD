@@ -10,7 +10,7 @@ With this project, the track will be completed
 
 ## Repository Contents
 
-The sources of main project tasks (5 stages) and testing.
+The sources of main project tasks (5 stages) and pytest testing.
 
 ## Installation
 
@@ -26,7 +26,7 @@ Have fun!
 
 ## Project completion
 
-[# Project was completed on 17.12.22]: # 
+Project was completed on 08.01.23
 
 ## Progress
 
@@ -40,3 +40,5 @@ Have fun!
 Python unittests with Idea supported run-configuration
 
 08.01.23 Stage 4 completed - ask player for a move, validate given input and make move if applicable
+
+08.01.23 Final Stage 5 completed - put together previous stages for complete game loop.

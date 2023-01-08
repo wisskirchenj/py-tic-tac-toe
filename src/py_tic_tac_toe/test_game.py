@@ -11,7 +11,7 @@ class TestGame(unittest.TestCase):
     def test_main_example1(self, mock_stdout, mock_input):
         mock_args = ['X_X_O____', '3 1']
         mock_input.side_effect = mock_args
-        game.main()
+        game.main_stage4()
         assert mock_stdout.getvalue() == '''---------
 | X _ X |
 | _ O _ |
@@ -29,7 +29,7 @@ class TestGame(unittest.TestCase):
     def test_main_example2(self, mock_stdout, mock_input):
         mock_args = ['_XXOO_OX_', '1 1']
         mock_input.side_effect = mock_args
-        game.main()
+        game.main_stage4()
         assert mock_stdout.getvalue() == '''---------
 | _ X X |
 | O O _ |
@@ -47,7 +47,7 @@ class TestGame(unittest.TestCase):
     def test_main_example3(self, mock_stdout, mock_input):
         mock_args = ['_XXOO_OX_', '3 3']
         mock_input.side_effect = mock_args
-        game.main()
+        game.main_stage4()
         assert mock_stdout.getvalue() == '''---------
 | _ X X |
 | O O _ |
@@ -65,7 +65,7 @@ class TestGame(unittest.TestCase):
     def test_main_example4(self, mock_stdout, mock_input):
         mock_args = ['_XXOO_OX_', '2 3']
         mock_input.side_effect = mock_args
-        game.main()
+        game.main_stage4()
         assert mock_stdout.getvalue() == '''---------
 | _ X X |
 | O O _ |
@@ -83,7 +83,7 @@ class TestGame(unittest.TestCase):
     def test_main_example5(self, mock_stdout, mock_input):
         mock_args = ['_XXOO_OX_', '3 1', '1 1']
         mock_input.side_effect = mock_args
-        game.main()
+        game.main_stage4()
         assert mock_stdout.getvalue() == '''---------
 | _ X X |
 | O O _ |
@@ -102,7 +102,7 @@ This cell is occupied! Choose another one!
     def test_main_example6(self, mock_stdout, mock_input):
         mock_args = ['_XXOO_OX_', 'one', 'one one', '1 1']
         mock_input.side_effect = mock_args
-        game.main()
+        game.main_stage4()
         assert mock_stdout.getvalue() == '''---------
 | _ X X |
 | O O _ |
@@ -122,7 +122,7 @@ You should enter numbers!
     def test_main_example7(self, mock_stdout, mock_input):
         mock_args = ['_XXOO_OX_', '4 1', '1 4', '1 1']
         mock_input.side_effect = mock_args
-        game.main()
+        game.main_stage4()
         assert mock_stdout.getvalue() == '''---------
 | _ X X |
 | O O _ |
@@ -135,4 +135,56 @@ Coordinates should be from 1 to 3!
 | O O _ |
 | O X _ |
 ---------
+'''
+
+    @patch('builtins.input')
+    @patch('sys.stdout', new_callable=StringIO)
+    def test_main_stage5(self, mock_stdout, mock_input):
+        mock_args = ['2 2', '2 2', 'two two', '1 4', '1 1', '3 3', '2 1', '3 1', '2 3', '3 2']
+        mock_input.side_effect = mock_args
+        game.main()
+        assert mock_stdout.getvalue() == '''---------
+| _ _ _ |
+| _ _ _ |
+| _ _ _ |
+---------
+---------
+| _ _ _ |
+| _ X _ |
+| _ _ _ |
+---------
+This cell is occupied! Choose another one!
+You should enter numbers!
+Coordinates should be from 1 to 3!
+---------
+| O _ _ |
+| _ X _ |
+| _ _ _ |
+---------
+---------
+| O _ _ |
+| _ X _ |
+| _ _ X |
+---------
+---------
+| O _ _ |
+| O X _ |
+| _ _ X |
+---------
+---------
+| O _ _ |
+| O X _ |
+| X _ X |
+---------
+---------
+| O _ _ |
+| O X O |
+| X _ X |
+---------
+---------
+| O _ _ |
+| O X O |
+| X X X |
+---------
+X wins
 '''
