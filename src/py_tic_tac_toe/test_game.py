@@ -4,6 +4,7 @@ from unittest.mock import patch
 from io import StringIO
 
 
+# noinspection SpellCheckingInspection
 class TestGame(unittest.TestCase):
 
     @patch('builtins.input')

@@ -3,6 +3,7 @@ import unittest
 import py_tic_tac_toe.board as boa
 
 
+# noinspection SpellCheckingInspection
 class BoardTest(unittest.TestCase):
 
     def test_row(self):
